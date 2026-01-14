@@ -12,11 +12,11 @@ packages = [
 [tool.poetry.dependencies]
 python = ">=3.11,<4.0"
 
+[tool.poetry.dev-dependencies]
+ruff = "^0.14"
+
 [tool.poetry.scripts]
 project = "labyrinth_game.main:main"
-
-[tool.poetry.group.dev.dependencies]
-ruff = "^0.14"
 
 [tool.ruff]
 line-length = 88
