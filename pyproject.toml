@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "project1-filippovich-vladislav-m255-55"
+version = "0.1.0"
+description = "Текстовая adventure игра 'Лабиринт сокровищ'."
+authors = ["Filippovich Vladislav <email@example.com>"]
+readme = "README.md"
+
+packages = [
+    { include = "labyrinth_game", from = "." }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<4.0"
+
+[tool.poetry.scripts]
+project = "labyrinth_game.main:main"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.14"
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+exclude = ["venv", ".venv", "dist", "__pycache__"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = []
